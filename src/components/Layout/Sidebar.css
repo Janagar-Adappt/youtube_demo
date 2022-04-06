@@ -1,0 +1,47 @@
+.side-bar {
+  height: 90vh;
+  width: 14%;
+  position: fixed;
+  left: 0;
+  top: 80px;
+  margin: 0;
+  white-space: nowrap;
+  margin-left: 15px;
+  overflow-y: scroll;
+}
+
+.side-bar .menu-item {
+  color: #030303;
+  padding: 10px 10px;
+  display: flex;
+  line-height: 3px;
+  align-items: center;
+}
+
+.side-bar ul .current {
+  background: #dadada;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.side-bar ul .current:hover {
+  background: #c8c8c8;
+  cursor: pointer;
+}
+
+.side-bar .menu-item:hover {
+  background: #e7e5e5;
+  cursor: pointer;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #dfdfdf;
+  margin: 15px 0;
+}
+
+span {
+  margin-left: 1rem;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
