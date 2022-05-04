@@ -1,3 +1,4 @@
+import React from 'react'
 import './Sidebar.css'
 
 import { SidebarMenu, LibraryMenu, MoreMenu, MoreMenus } from "./SidebarMenu";

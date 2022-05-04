@@ -1,3 +1,4 @@
+import React from 'react'
 import './VideoSection.css'
 import Video from "./Video"
 import Sidebar from '../Layout/Sidebar'

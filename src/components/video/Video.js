@@ -1,18 +1,18 @@
+import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import TimeAgo from 'react-timeago';
-
-import './VideoSection.css'
-
 import { MdVerified } from "react-icons/md";
 
+import './VideoSection.css'
+import fallbackImg from './866-250x150.jpg'
 
 const Video = ({ video }) => {
   const { id, title, channel, duration, viewsCount, uploadedAt } = video
 
   const [error, setError] = useState(false);
 
-  let image = (!error) ? video.thumbnail : 'https://picsum.photos/seed/picsum/250/150';
+  let image = (!error) ? video.thumbnail : fallbackImg;
 
   const onImageError = () => {
     setError(true)
@@ -30,11 +30,12 @@ const Video = ({ video }) => {
         <a href="#">
           <img
             className="channel-icon"
-            src={image}
+            src={channel.icon}
           />
         </a>
         <div className="video-details">
-          <a href="#" className="video-title">{title}</a>
+          <Link to={`/video/${id}`} className="video-title">{title}
+          </Link>
           <a href="#" className="video-channel-name">{channel.name} <MdVerified size={13} /></a>
           <div className="video-metadata">
             <span>{viewsCount}</span>
